@@ -24,8 +24,8 @@ const Menu = createDrawerNavigator({
                 horizontal: "never"
             }}>
                 <Drawer.Section>
-<View style={{flex:1,padding:0,width:289,height:96}}>
-<Image style={{width: '100%', height: 96}} source={{uri:'http://www.amasya.bel.tr/UI/tr-TR/images/logo.png'}}/>
+<View style={{flex:1,padding:10,width:260,height:96}}>
+<Image resizeMode="contain" style={{ alignSelf: 'center',width: '100%', height: 96}} source={{uri:'http://www.amasya.bel.tr/UI/tr-TR/images/logo.png'}}/>
 </View>
 
                     <List.Section>
