@@ -2,7 +2,7 @@ import {StyleSheet} from 'react-native';
 export default StyleSheet.create({
     header: {
         fontFamily: 'opensans-bold',
-        fontSize: 24
+        fontSize: 24,
     },
     subHeader: {
         fontFamily: 'opensans',

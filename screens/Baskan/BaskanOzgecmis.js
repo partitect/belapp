@@ -2,7 +2,7 @@ import React from 'react';
 import {Appbar, Headline, Subheading} from "react-native-paper";
 import {withNavigation, DrawerActions} from "react-navigation";
 import {View, Text, StyleSheet, ScrollView, Image} from "react-native";
-import mainStyles from '../styles/styles';
+import mainStyles from '../../styles/styles';
 class BaskanScreen extends React.Component {
   constructor(props) {
     super(props);
