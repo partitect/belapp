@@ -1,0 +1,196 @@
+{
+  "meclis": [
+    {
+      "id": 1,
+      "ad": "Mehmet SARI",
+      "gorev": "Belediye Başkanı",
+      "resim": "http://amasya.bel.tr/Files/mehmet-sari/meclis-uyeleri/1.jpg"
+    },
+    {
+      "id": 2,
+      "ad": "Ahmet ÇOBAN",
+      "gorev": "",
+      "resim": "http://amasya.bel.tr/Files/mehmet-sari/meclis-uyeleri/ahmet-coban.jpg"
+    },
+    {
+      "id": 3,
+      "ad": "İbrahim Hakkı ÖZŞEN",
+      "gorev": "",
+      "resim": "http://amasya.bel.tr/Files/mehmet-sari/meclis-uyeleri/ibrahim-hakki-ozsen.jpg"
+    },
+    {
+      "id": 4,
+      "ad": "Ömer ELİAÇIK",
+      "gorev": "",
+      "resim": "http://amasya.bel.tr/Files/mehmet-sari/meclis-uyeleri/Untitled-1.jpg"
+    },
+    {
+      "id": 5,
+      "ad": "Bayram ÇELİK",
+      "gorev": "",
+      "resim": "http://amasya.bel.tr/Files/mehmet-sari/meclis-uyeleri/bayram-celik.jpg"
+    },
+    {
+      "id": 6,
+      "ad": "Özcan GÜR",
+      "gorev": "",
+      "resim": "http://amasya.bel.tr/Files/mehmet-sari/meclis-uyeleri/ozcan-gur.jpg"
+    },
+    {
+      "id": 7,
+      "ad": "Yaşar ELBİR",
+      "gorev": "",
+      "resim": "http://amasya.bel.tr/Files/mehmet-sari/meclis-uyeleri/yasar-elbir.jpg"
+    },
+    {
+      "id": 8,
+      "ad": "Cahit AKTAŞ",
+      "gorev": "",
+      "resim": "http://amasya.bel.tr/Files/mehmet-sari/meclis-uyeleri/cahit-aktas.jpg"
+    },
+    {
+      "id": 9,
+      "ad": "Mehmet BOZKURT",
+      "gorev": "",
+      "resim": "http://amasya.bel.tr/Files/mehmet-sari/meclis-uyeleri/mehmet-bozkurt.jpg"
+    },
+    {
+      "id": 10,
+      "ad": "Hasan ŞAHİN",
+      "gorev": "",
+      "resim": "http://amasya.bel.tr/Files/mehmet-sari/meclis-uyeleri/hasan-sahin.jpg"
+    },
+    {
+      "id": 11,
+      "ad": "Celil İNCE",
+      "gorev": "",
+      "resim": "http://amasya.bel.tr/Files/mehmet-sari/meclis-uyeleri/celil-ince.jpg"
+    },
+    {
+      "id": 12,
+      "ad": "Ahmet AYDIN",
+      "gorev": "",
+      "resim": "http://amasya.bel.tr/Files/mehmet-sari/meclis-uyeleri/ahmet-aydin.jpg"
+    },
+    {
+      "id": 13,
+      "ad": "Ömer Faruk ÜNAL",
+      "gorev": "",
+      "resim": "http://amasya.bel.tr/Files/mehmet-sari/meclis-uyeleri/omer-faruk-unal.jpg"
+    },
+    {
+      "id": 14,
+      "ad": "Gönül CEBECİ",
+      "gorev": "",
+      "resim": "http://amasya.bel.tr/Files/mehmet-sari/meclis-uyeleri/gonul-cebeci.jpg"
+    },
+    {
+      "id": 15,
+      "ad": "İsmail LAP",
+      "gorev": "",
+      "resim": "http://amasya.bel.tr/Files/mehmet-sari/meclis-uyeleri/ismail-lap.jpg"
+    },
+    {
+      "id": 16,
+      "ad": "Cemal Umut KILIÇ",
+      "gorev": "",
+      "resim": "http://amasya.bel.tr/Files/mehmet-sari/meclis-uyeleri/cemal-umut-kilic.jpg"
+    },
+    {
+      "id": 17,
+      "ad": "M. Onur KAVAKLIOĞLU",
+      "gorev": "",
+      "resim": "http://amasya.bel.tr/Files/mehmet-sari/meclis-uyeleri/mustafa-onur-kavaklioglu.jpg"
+    },
+    {
+      "id": 18,
+      "ad": "Oğuzhan SAKIZCI",
+      "gorev": "",
+      "resim": "http://amasya.bel.tr/Files/mehmet-sari/meclis-uyeleri/oguzhan-sakizci.jpg"
+    },
+    {
+      "id": 19,
+      "ad": "Bilal AYDIN",
+      "gorev": "",
+      "resim": "http://amasya.bel.tr/Files/mehmet-sari/meclis-uyeleri/bilal-aydin.jpg"
+    },
+    {
+      "id": 20,
+      "ad": "Ali ÇETİN",
+      "gorev": "",
+      "resim": "http://amasya.bel.tr/Files/mehmet-sari/meclis-uyeleri/ali-cetin.jpg"
+    },
+    {
+      "id": 21,
+      "ad": "Mürsel KULOĞLU",
+      "gorev": "",
+      "resim": "http://amasya.bel.tr/Files/mehmet-sari/meclis-uyeleri/mursel-kuloglu.jpg"
+    },
+    {
+      "id": 22,
+      "ad": "Emine ALTUNBAŞ",
+      "gorev": "",
+      "resim": "http://amasya.bel.tr/Files/mehmet-sari/meclis-uyeleri/emine-altunbas.jpg"
+    },
+    {
+      "id": 23,
+      "ad": "Osman ŞİŞMAN",
+      "gorev": "",
+      "resim": "http://amasya.bel.tr/Files/mehmet-sari/meclis-uyeleri/osman-sisman.jpg"
+    },
+    {
+      "id": 24,
+      "ad": "Hakan AKÇAY",
+      "gorev": "",
+      "resim": "http://amasya.bel.tr/Files/mehmet-sari/meclis-uyeleri/hakan-akcay.jpg"
+    },
+    {
+      "id": 25,
+      "ad": "Bahattin AŞIK",
+      "gorev": "",
+      "resim": "http://amasya.bel.tr/Files/mehmet-sari/meclis-uyeleri/bahattin-asik.jpg"
+    },
+    {
+      "id": 26,
+      "ad": "Sercan GÜNER",
+      "gorev": "",
+      "resim": "http://amasya.bel.tr/Files/mehmet-sari/meclis-uyeleri/sercan-guner.jpg"
+    },
+    {
+      "id": 27,
+      "ad": "Mehmet KURT",
+      "gorev": "",
+      "resim": "http://amasya.bel.tr/Files/mehmet-sari/meclis-uyeleri/mehmet-kurt.jpg"
+    },
+    {
+      "id": 28,
+      "ad": "İsmail ÇEKDEMİR",
+      "gorev": "",
+      "resim": "http://amasya.bel.tr/Files/mehmet-sari/meclis-uyeleri/ismail-cekdemir.jpg"
+    },
+    {
+      "id": 29,
+      "ad": "Osman YÜCE",
+      "gorev": "",
+      "resim": "http://amasya.bel.tr/Files/mehmet-sari/meclis-uyeleri/osman-yuce.jpg"
+    },
+    {
+      "id": 30,
+      "ad": "Kazım ÖZKAYA",
+      "gorev": "",
+      "resim": "http://amasya.bel.tr/Files/mehmet-sari/meclis-uyeleri/kazim-ozkaya.jpg"
+    },
+    {
+      "id": 31,
+      "ad": "Mustafa KARAKAŞ",
+      "gorev": "",
+      "resim": "http://amasya.bel.tr/Files/mehmet-sari/meclis-uyeleri/mustafa-karakas.jpg"
+    },
+    {
+      "id": 32,
+      "ad": "Bekdemir İŞBİLİR",
+      "gorev": "",
+      "resim": "http://amasya.bel.tr/Files/mehmet-sari/meclis-uyeleri/bekdemir-isbilir.jpg"
+    }
+  ]
+}
