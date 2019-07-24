@@ -1,45 +1,101 @@
-import React from 'react';
-import { Appbar, Headline } from 'react-native-paper';
-import { withNavigation, DrawerActions } from 'react-navigation';
-import { View, Text, StyleSheet, ScrollView, Dimensions } from 'react-native';
-import mainStyles from '../../styles/styles';
-import HTML from 'react-native-render-html';
-
-
+import React from "react";
+import { Appbar, Headline, ActivityIndicator, Divider } from "react-native-paper";
+import { withNavigation, DrawerActions } from "react-navigation";
+import { View, Text, StyleSheet, ScrollView, RefreshControl } from "react-native";
+import { PCards } from "../../components/personelCard";
 class MeclisUyeleri extends React.Component {
-	constructor(props) {
-		super(props);
-	}
-	_goBack = () => console.log('Went back');
+  constructor(props) {
+    super(props);
 
-	_onSearch = () => console.log('Searching');
+    this.state = {
+      isLoading: false,
+	  content: null,
+      refreshing: false
+    };
+  }
+  _onRefresh = () => {
+    this.setState({ refreshing: true });
+    this.makeRemoteRequest().then(() => {
+      this.setState({ refreshing: false });
+    });
+  };
+  makeRemoteRequest = () => {
+    return fetch(
+      "https://raw.githubusercontent.com/partitect/cobi/master/meclis.json"
+    )
+      .then(response => response.json())
+      .then(responseJson => {
+        this.setState({
+          isLoading: true,
+          content: responseJson.meclis
+        });
+      })
+      .catch(error => {});
+  };
+  componentDidMount() {
+    this.makeRemoteRequest();
+  }
 
-	_onMore = () => console.log('Shown more');
-	render() {
-		return (
-			<View>
-				<Appbar.Header>
-					<Appbar.Action
-						icon="menu"
-						onPress={() => this.props.navigation.dispatch(DrawerActions.toggleDrawer())}
-					/>
-					<Appbar.Content title="Amasya Belediyesi" subtitle="Tarihi Yapı" />
-					<Appbar.Action icon="search" onPress={this._onSearch} />
-					<Appbar.Action icon="more-vert" onPress={this._onMore} />
-				</Appbar.Header>
+  _goBack = () => console.log("Went back");
 
-				<ScrollView style={styles.mainContent}>
-				<Headline> 2019-2024 YILLARI DÖMEMİNE AİT BELEDİYE MECLİS ÜYELERİ LİSTESİ</Headline>
-				</ScrollView>
-			</View>
-		);
-	}
+  _onSearch = () => console.log("Searching");
+
+  _onMore = () => console.log("Shown more");
+  render() {
+    //console.log(this.state.content);
+    return (
+      <View style={{ flex: 1 }}>
+        <Appbar.Header>
+          <Appbar.Action
+            icon="menu"
+            onPress={() =>
+              this.props.navigation.dispatch(DrawerActions.toggleDrawer())
+            }
+          />
+          <Appbar.Content title="Amasya Belediyesi" subtitle="Meclis Üyeleri" />
+          <Appbar.Action icon="search" onPress={this._onSearch} />
+          <Appbar.Action icon="more-vert" onPress={this._onMore} />
+        </Appbar.Header>
+		<ScrollView
+          refreshControl={
+            <RefreshControl
+              refreshing={this.state.refreshing}
+              onRefresh={this._onRefresh}
+            />
+          }
+        >
+        <Headline style={styles.header}>
+          2019-2024 YILLARI DÖMEMİNE AİT
+        </Headline>
+		<Headline style={styles.header}>
+          BELEDİYE MECLİS ÜYELERİ LİSTESİ
+        </Headline>
+		<Divider style={{marginBottom:10}}></Divider>
+        {this.state.isLoading ? (
+            <PCards
+              data={this.state.content}
+            />
+         
+        ) : (
+          <ActivityIndicator animating={true} color="red" />
+        )}
+		</ScrollView>
+      </View>
+    );
+  }
 }
 const styles = StyleSheet.create({
-	mainContent: {
-		padding: 10,
-		marginBottom:90
-	}
+  mainContent: {
+    padding: 10
+  },
+  content: {
+    flexDirection: "row",
+	flexWrap: "wrap",
+  },
+  header:{
+	  fontSize:18,
+	  textAlign:'center'
+  }
 });
 
 export default withNavigation(MeclisUyeleri);

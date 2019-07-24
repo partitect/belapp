@@ -22,6 +22,10 @@ import Tarih from "../screens/Kent/Tarih";
 
 import OrganizasyonSemasi from "../screens/Yonetim/OrganizasyonSemasi";
 import MeclisUyeleri from "../screens/Yonetim/MeclisUyeleri";
+import EncumenUyeleri from "../screens/Yonetim/EncumenUyeleri";
+import ImarKomisyonu from "../screens/Yonetim/ImarKomisyonu";
+import DenetimKomisyonu from "../screens/Yonetim/DenetimKomisyonu";
+import PlanButceKomisyonu from "../screens/Yonetim/PlanButceKomisyonu";
 
 import Haberler from "../screens/Icerik/Haberler";
 import Duyurular from "../screens/Icerik/Duyurular";
@@ -97,6 +101,18 @@ const Menu = createDrawerNavigator(
     },
     MeclisUyeleri: {
       screen: MeclisUyeleri
+    },
+    EncumenUyeleri: {
+      screen: EncumenUyeleri
+    },
+    ImarKomisyonu: {
+      screen: ImarKomisyonu
+    },
+    DenetimKomisyonu: {
+      screen: DenetimKomisyonu
+    },
+    PlanButceKomisyonu: {
+      screen: PlanButceKomisyonu
     }
   },
   {
@@ -165,19 +181,19 @@ const Menu = createDrawerNavigator(
               />
               <List.Item
                 title="Encümen Üyeleri"
-                onPress={() => props.navigation.navigate("First")}
+                onPress={() => props.navigation.navigate("EncumenUyeleri")}
               />
               <List.Item
                 title="İmar Komisyonu"
-                onPress={() => props.navigation.navigate("First")}
+                onPress={() => props.navigation.navigate("ImarKomisyonu")}
               />
               <List.Item
                 title="Denetim Komisyonu"
-                onPress={() => props.navigation.navigate("First")}
+                onPress={() => props.navigation.navigate("DenetimKomisyonu")}
               />
               <List.Item
                 title="Plan & Bütçe Komisyonu"
-                onPress={() => props.navigation.navigate("First")}
+                onPress={() => props.navigation.navigate("PlanButceKomisyonu")}
               />
             </List.Accordion>
 
