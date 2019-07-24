@@ -11,8 +11,8 @@ import {
 } from "react-native";
 import { Ionicons } from "@expo/vector-icons";
 
-import AppNavigator from "./navigation/AppNavigator";
-import DrawerComp from "./drawer";
+
+import DrawerComp from "./navigation/drawer";
 export default function App(props) {
   const [isLoadingComplete, setLoadingComplete] = useState(false);
 

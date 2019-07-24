@@ -2,18 +2,52 @@ import React from "react";
 import { Text, Image, ScrollView, View } from "react-native";
 import { createAppContainer, createDrawerNavigator } from "react-navigation";
 import { DrawerActions } from "react-navigation";
-import { Appbar, Drawer, List, Divider } from "react-native-paper";
+import { Appbar, Drawer, List, Divider,BottomNavigation } from "react-native-paper";
 import { SafeAreaView } from "react-navigation"; // ⚠ you need the package 'react-navigation'
-import HomeScreen from "./screens/HomeScreen";
-import BaskandanMesaj from "./screens/Baskan/BaskandanMesaj";
-import BaskanOzgecmis from "./screens/Baskan/BaskanOzgecmis";
-import BaskanaMesaj from "./screens/Baskan/BaskanaMesaj";
+import HomeScreen from "../screens/HomeScreen";
+import BaskandanMesaj from "../screens/Baskan/BaskandanMesaj";
+import BaskanOzgecmis from "../screens/Baskan/BaskanOzgecmis";
+import BaskanaMesaj from "../screens/Baskan/BaskanaMesaj";
 
+
+class TabComp extends React.PureComponent {
+  state = {
+    index: 0,
+    routes: [
+      { key: 'home', title: 'Anasayfa', icon: 'spa' },
+      { key: 'haber', title: 'Haberler', icon: 'developer-board' },
+      { key: 'duyuru', title: 'Duyurular', icon: 'announcement' },
+      { key: 'etkinlik', title: 'Etkinlikler', icon: 'event-note' },
+
+      
+    ],
+  };
+
+  _handleIndexChange = index => this.setState({ index });
+
+  _renderScene = BottomNavigation.SceneMap({
+    home: HomeScreen,
+    haber: BaskandanMesaj,
+    duyuru: BaskandanMesaj,
+    etkinlik: BaskandanMesaj,
+
+  });
+
+  render() {
+    return (
+      <BottomNavigation
+        navigationState={this.state}
+        onIndexChange={this._handleIndexChange}
+        renderScene={this._renderScene}
+      />
+    );
+  }
+}
 
 const Menu = createDrawerNavigator(
   {
     First: {
-      screen: HomeScreen
+      screen: TabComp
     },
     Second: {
       screen: BaskanOzgecmis
@@ -49,7 +83,7 @@ const Menu = createDrawerNavigator(
             
               <List.Accordion
                 title="Belediye Başkanı"
-                left={props => <List.Icon {...props} icon="folder" />}
+                left={props => <List.Icon {...props} icon="contacts" />}
               >
                 <List.Item
                   title="Başkandan Mesaj"
@@ -64,7 +98,7 @@ const Menu = createDrawerNavigator(
             
               <List.Accordion
                 title="Yönetim"
-                left={props => <List.Icon {...props} icon="folder" />}
+                left={props => <List.Icon {...props} icon="business-center" />}
               >
                 <List.Item
                   title="Organizasyon Şeması"
@@ -90,12 +124,12 @@ const Menu = createDrawerNavigator(
                   title="Plan & Bütçe Komisyonu"
                   onPress={() => props.navigation.navigate("First")}
                 />
-                <List.Item title="Başkana Mesaj" />
+              
               </List.Accordion>
             
               <List.Accordion
                 title="Kent Bilgisi"
-                left={props => <List.Icon {...props} icon="folder" />}
+                left={props => <List.Icon {...props} icon="map" />}
               >
                 <List.Item
                   title="Coğrafi Yapı"
@@ -106,7 +140,13 @@ const Menu = createDrawerNavigator(
                   onPress={() => props.navigation.navigate("First")}
                 />
               </List.Accordion>
-            
+              <List.Item descriptionStyle={{height:0}}
+              title="Hizmetler"
+              onPress={() => props.navigation.navigate("First")}
+              left={props => (
+                <List.Icon {...props} icon="local-florist" />
+              )}
+            />
           </Drawer.Section>
         </SafeAreaView>
       </ScrollView>
