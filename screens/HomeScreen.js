@@ -4,7 +4,7 @@ import { withNavigation, DrawerActions } from 'react-navigation';
 import { View, Text, StyleSheet, ScrollView, Image } from 'react-native';
 
 import mainStyles from '../styles/styles';
-
+import GLOBALS from '../global/config';
 class HomeScreen extends React.Component {
 	constructor(props) {
 		super(props);
@@ -22,7 +22,7 @@ class HomeScreen extends React.Component {
 						icon="menu"
 						onPress={() => this.props.navigation.dispatch(DrawerActions.toggleDrawer())}
 					/>
-					<Appbar.Content title="Amasya Belediyesi" subtitle="Anasayfa" />
+					<Appbar.Content title={GLOBALS.BASE_NAME} subtitle="Anasayfa" />
 					<Appbar.Action icon="search" onPress={this._onSearch} />
 					<Appbar.Action icon="more-vert" onPress={this._onMore} />
 				</Appbar.Header>
