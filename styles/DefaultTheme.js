@@ -1,32 +1,36 @@
-/* @flow */
-
 import color from 'color';
-import { black, white, pinkA400 } from './colors';
-import fonts from './fonts';
 
-export default {
+
+
+const DefaultTheme = {
   dark: false,
   roundness: 4,
   colors: {
     primary: '#ED1C24',
-    accent: '#03dac4',
+    accent: '#00A651',
     background: '#f6f6f6',
-    surface: white,
+    surface: '#fff',
     error: '#B00020',
-    text: '#7A7D7D',
-    disabled: color(black)
+    text: '#000',
+    onBackground: '#000000',
+    onSurface: '#000000',
+    disabled: color('#000')
       .alpha(0.26)
       .rgb()
       .string(),
-    placeholder: color(black)
+    placeholder: color('#000')
       .alpha(0.54)
       .rgb()
       .string(),
-    backdrop: color(black)
+    backdrop: color('#000')
       .alpha(0.5)
       .rgb()
       .string(),
-    notification: pinkA400,
+    notification: '#f0c',
   },
-  fonts,
+  animation: {
+    scale: 1.0,
+  },
 };
+
+export default DefaultTheme;

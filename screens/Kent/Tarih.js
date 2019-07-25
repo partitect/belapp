@@ -4,7 +4,7 @@ import { withNavigation, DrawerActions } from 'react-navigation';
 import { View, Text, StyleSheet, ScrollView, Dimensions } from 'react-native';
 import mainStyles from '../../styles/styles';
 import HTML from 'react-native-render-html';
-
+import AppBarComp from '../../components/appBarComp';
 const htmlContent = `
 <div class="page-content">
         <div class="page-content-text">
@@ -48,15 +48,7 @@ class Tarih extends React.Component {
 	render() {
 		return (
 			<View>
-				<Appbar.Header>
-					<Appbar.Action
-						icon="menu"
-						onPress={() => this.props.navigation.dispatch(DrawerActions.toggleDrawer())}
-					/>
-					<Appbar.Content title="Amasya Belediyesi" subtitle="Tarihi Yapı" />
-					<Appbar.Action icon="search" onPress={this._onSearch} />
-					<Appbar.Action icon="more-vert" onPress={this._onMore} />
-				</Appbar.Header>
+			<AppBarComp subTitle="Tarihi Yapı"/>
 
 				<ScrollView style={styles.mainContent}>
 					<HTML html={htmlContent} imagesMaxWidth={Dimensions.get('window').width} />

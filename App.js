@@ -2,6 +2,7 @@ import { AppLoading } from "expo";
 import { Asset } from "expo-asset";
 import * as Font from "expo-font";
 import React, { useState, Fragment } from "react";
+import { Provider as PaperProvider } from 'react-native-paper';
 import {
   Platform,
   StatusBar,
@@ -27,8 +28,8 @@ export default function App(props) {
   } else {
     return (
       <Fragment>
-        <SafeAreaView style={{ flex: 0, backgroundColor: "red" }} />
-        <SafeAreaView style={{ flex: 1, backgroundColor: "blue" }}>
+        <SafeAreaView style={{ flex: 0, backgroundColor: "#ED1C24" }} />
+        <SafeAreaView style={{ flex: 1, backgroundColor: "#ED1C24" }}>
           {Platform.OS === "ios" && <StatusBar barStyle="default" />}
           <View style={styles.container}>
             <DrawerComp />

@@ -4,8 +4,8 @@ import { withNavigation, DrawerActions } from 'react-navigation';
 import { View, Text, StyleSheet, ScrollView, Image } from 'react-native';
 
 import mainStyles from '../../styles/styles';
-
-class ihaleler extends React.Component {
+import AppBarComp from '../../components/appBarComp';
+class Ihaleler extends React.Component {
 	constructor(props) {
 		super(props);
 	}
@@ -17,15 +17,7 @@ class ihaleler extends React.Component {
 	render() {
 		return (
 			<View>
-				<Appbar.Header>
-					<Appbar.Action
-						icon="menu"
-						onPress={() => this.props.navigation.dispatch(DrawerActions.toggleDrawer())}
-					/>
-					<Appbar.Content title="Amasya Belediyesi" subtitle="İhaleler" />
-					<Appbar.Action icon="search" onPress={this._onSearch} />
-					<Appbar.Action icon="more-vert" onPress={this._onMore} />
-				</Appbar.Header>
+				<AppBarComp subTitle="İhaleler"/>
        
 			</View>
 		);
@@ -38,4 +30,4 @@ const styles = StyleSheet.create({
 	}
 });
 
-export default withNavigation(ihaleler);
+export default withNavigation(Ihaleler);

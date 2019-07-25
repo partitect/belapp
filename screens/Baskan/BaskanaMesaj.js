@@ -3,6 +3,7 @@ import {Appbar, Headline, Subheading} from "react-native-paper";
 import {withNavigation, DrawerActions} from "react-navigation";
 import {View, Text, StyleSheet, ScrollView, Image} from "react-native";
 import mainStyles from '../../styles/styles';
+import AppBarComp from '../../components/appBarComp';
 class BaskanScreen extends React.Component {
   constructor(props) {
     super(props);
@@ -10,12 +11,7 @@ class BaskanScreen extends React.Component {
   render() {
     return (
       <View>
-        <Appbar.Header style={{backgroundColor:'#ED1C24'}}>
-          <Appbar.Action
-            icon="menu"
-            onPress={() => this.props.navigation.dispatch(DrawerActions.toggleDrawer())}/>
-          <Appbar.Content title="Başkanın Özgeçmişi"/>
-        </Appbar.Header>
+      <AppBarComp subTitle="Başkana Mesaj"/>
         <ScrollView style={styles.mainContent}>
 
           <Image

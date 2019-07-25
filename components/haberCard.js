@@ -5,7 +5,7 @@ import { LinearGradient } from 'expo-linear-gradient'
 
 
 
-export class PCards extends React.PureComponent<Props> {
+export class HCards extends React.PureComponent<Props> {
   constructor(props) {
     super(props);
     
@@ -17,24 +17,28 @@ export class PCards extends React.PureComponent<Props> {
       <View style={{ flex: 1 }}>
         <View style={styles.content}>
           {this.props.data.map((data, i, arr) => {
-            let wdt = 0;
-            let img = "";
-            if (data.gorev === "Belediye Başkanı") {
-                wdt = "100%";
-            } else {
-              wdt = "50%";
-            }
-            if (data.resim == "null") {
+          let wdt = 0;
+		  let img = "";
+		  if (arr.length - 1 === i) {
+			if (i % 2 == 0) {
+			  wdt = "100%";
+			} else {
+			  wdt = "50%";
+			}
+		  } else {
+			wdt = "50%";
+		  }
+            if (data.image == "null") {
               img =
                 "https://github.com/partitect/cobi/blob/master/null-img1.png";
             } else {
-              img = data.resim;
+              img = data.image;
             }
             const App = () => {
               return (
                 <TouchableRipple
                   onPress={() =>
-                    this.onPress(data.ad, data.id, this.props.navScreen)
+                    this.onPress(data.title, data.id, this.props.navScreen)
                   }
                   style={{
                     height: Dimensions.get("window").width / 2,
@@ -60,9 +64,9 @@ export class PCards extends React.PureComponent<Props> {
                       <Headline
                         style={[styles.imgText]}
                       >
-                        {data.ad}
+                        {data.title}
                       </Headline>
-                      <Subheading style={[styles.gorevText]}>{data.gorev}</Subheading>
+                      
                     </LinearGradient>
                   </ImageBackground>
                 </TouchableRipple>
@@ -87,7 +91,7 @@ const styles = StyleSheet.create({
     right: 0,
     bottom: 0,
     left: 0,
-    backgroundColor: "rgba(0,0,238,.1)",
+    backgroundColor: "rgba(0,0,238,.2)",
     borderRadius: 5
   },
   item: {

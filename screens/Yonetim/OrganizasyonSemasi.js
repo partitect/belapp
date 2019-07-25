@@ -15,7 +15,7 @@ import {
 } from "react-native";
 import TreeView from "react-native-final-tree-view";
 import { Feather } from "@expo/vector-icons";
-
+import AppBarComp from '../../components/appBarComp';
 class OrganizasyonSemasi extends React.Component {
   constructor(props) {
     super(props);
@@ -58,17 +58,7 @@ class OrganizasyonSemasi extends React.Component {
     //console.log(this.state.content);
     return (
       <View style={{ flex: 1 }}>
-        <Appbar.Header>
-          <Appbar.Action
-            icon="menu"
-            onPress={() =>
-              this.props.navigation.dispatch(DrawerActions.toggleDrawer())
-            }
-          />
-          <Appbar.Content title="Amasya Belediyesi" subtitle="Meclis Üyeleri" />
-          <Appbar.Action icon="search" onPress={this._onSearch} />
-          <Appbar.Action icon="more-vert" onPress={this._onMore} />
-        </Appbar.Header>
+        <AppBarComp subTitle="Organizasyon Şeması"/>
         <ScrollView
           refreshControl={
             <RefreshControl

@@ -4,7 +4,13 @@ import { withNavigation, DrawerActions } from 'react-navigation';
 import { View, Text, StyleSheet, ScrollView, Image } from 'react-native';
 
 import mainStyles from '../styles/styles';
+import AppBarComp from '../components/appBarComp';
 import GLOBALS from '../global/config';
+import Haberler from '../components/Anasayfa/haberler';
+import Duyurular from '../components/Anasayfa/duyurular';
+import GununEczanesi from '../components/Anasayfa/gununEczanesi';
+import HavaDurumu from '../components/Anasayfa/havaDurumu';
+
 class HomeScreen extends React.Component {
 	constructor(props) {
 		super(props);
@@ -17,24 +23,33 @@ class HomeScreen extends React.Component {
 	render() {
 		return (
 			<View>
-				<Appbar.Header>
-					<Appbar.Action
-						icon="menu"
-						onPress={() => this.props.navigation.dispatch(DrawerActions.toggleDrawer())}
-					/>
-					<Appbar.Content title={GLOBALS.BASE_NAME} subtitle="Anasayfa" />
-					<Appbar.Action icon="search" onPress={this._onSearch} />
-					<Appbar.Action icon="more-vert" onPress={this._onMore} />
-				</Appbar.Header>
-       
+				<AppBarComp subTitle="Anasayfa" />
+				<ScrollView style={styles.mainContent}>
+					<View style={{ flex: 1 }}>
+						<Headline style={[ styles.vHeader ]}>Amasya Bugün</Headline>
+						<HavaDurumu />
+						<Headline style={[ styles.vHeader ]}>Belediyemizden Haberler</Headline>
+						<Haberler />
+						<Headline style={[ styles.vHeader ]}>Nöbetçi Eczaneler</Headline>
+						<GununEczanesi />
+						<Headline style={[ styles.vHeader ]}>Belediyemizden Duyurular</Headline>
+						<Duyurular />
+					</View>
+				</ScrollView>
 			</View>
 		);
 	}
 }
 const styles = StyleSheet.create({
 	mainContent: {
-		padding: 10
-		//arginBottom:120
+		marginBottom: 100
+	},
+	vHeader: {
+		fontWeight: 'normal',
+		fontFamily: 'opensans-bold',
+		padding: 7,
+		backgroundColor: '#00A651',
+		color: '#fff'
 	}
 });
 

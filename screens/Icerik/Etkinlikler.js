@@ -1,40 +1,95 @@
-import React from 'react';
-import { Appbar, Headline } from 'react-native-paper';
-import { withNavigation, DrawerActions } from 'react-navigation';
-import { View, Text, StyleSheet, ScrollView, Image } from 'react-native';
-
-import mainStyles from '../../styles/styles';
+import React from "react";
+import { Appbar, Headline, ActivityIndicator, Divider } from "react-native-paper";
+import { withNavigation, DrawerActions } from "react-navigation";
+import { View, Text, StyleSheet, ScrollView, RefreshControl } from "react-native";
+import { HCards } from "../../components/haberCard";
+import AppBarComp from '../../components/appBarComp';
 class Etkinlikler extends React.Component {
-	constructor(props) {
-		super(props);
-	}
-	_goBack = () => console.log('Went back');
+  constructor(props) {
+    super(props);
 
-	_onSearch = () => console.log('Searching');
+    this.state = {
+      isLoading: false,
+	  content: null,
+      refreshing: false
+    };
+  }
+  _onRefresh = () => {
+    this.setState({ refreshing: true });
+    this.makeRemoteRequest().then(() => {
+      this.setState({ refreshing: false });
+    });
+  };
+  makeRemoteRequest = () => {
+    return fetch(
+      "https://raw.githubusercontent.com/partitect/cobi/master/etkinlikler.json"
+    )
+      .then(response => response.json())
+      .then(responseJson => {
+        this.setState({
+          isLoading: true,
+          content: responseJson.etkinlikler
+        });
+      })
+      .catch(error => {});
+  };
+  componentDidMount() {
+    this.makeRemoteRequest();
+  }
 
-	_onMore = () => console.log('Shown more');
-	render() {
-		return (
-			<View>
-				<Appbar.Header>
-					<Appbar.Action
-						icon="menu"
-						onPress={() => this.props.navigation.dispatch(DrawerActions.toggleDrawer())}
-					/>
-					<Appbar.Content title="Amasya Belediyesi" subtitle="Etkinlikler" />
-					<Appbar.Action icon="search" onPress={this._onSearch} />
-					<Appbar.Action icon="more-vert" onPress={this._onMore} />
-				</Appbar.Header>
-       
-			</View>
-		);
-	}
+  _goBack = () => console.log("Went back");
+
+  _onSearch = () => console.log("Searching");
+
+  _onMore = () => console.log("Shown more");
+  render() {
+    //console.log(this.state.content);
+    return (
+      <View style={{ flex: 1 }}>
+        <AppBarComp subTitle="Etkinlikler"/>
+		<ScrollView
+          refreshControl={
+            <RefreshControl
+              refreshing={this.state.refreshing}
+              onRefresh={this._onRefresh}
+            />
+          }
+        >
+       <Headline style={[ styles.vHeader ]}>Tüm Etkinlikler</Headline>
+        {this.state.isLoading ? (
+            <HCards
+              data={this.state.content}
+            />
+         
+        ) : (
+          <ActivityIndicator animating={true} color="red" />
+        )}
+		</ScrollView>
+      </View>
+    );
+  }
 }
 const styles = StyleSheet.create({
-	mainContent: {
-		padding: 10
-		//arginBottom:120
-	}
+  mainContent: {
+    padding: 10
+  },
+  content: {
+    flexDirection: "row",
+	flexWrap: "wrap",
+  },
+  header:{
+	  fontSize:18,
+	  textAlign:'center'
+  },
+  vHeader: {
+	borderBottomColor: 'rgba(0,0,0,.1)',
+	borderBottomWidth: 1,
+	fontWeight: 'normal',
+	fontFamily: 'opensans',
+	marginBottom:5,
+	paddingBottom:5,
+	paddingHorizontal:10
+}
 });
 
 export default withNavigation(Etkinlikler);

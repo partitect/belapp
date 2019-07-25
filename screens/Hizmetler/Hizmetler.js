@@ -1,44 +1,90 @@
-import React from 'react';
-import { Appbar, Headline } from 'react-native-paper';
-import { withNavigation, DrawerActions } from 'react-navigation';
-import { View, Text, StyleSheet, ScrollView, Image } from 'react-native';
-
-import mainStyles from '../../styles/styles';
-
+import React from "react";
+import { Appbar, Headline, ActivityIndicator, Divider } from "react-native-paper";
+import { withNavigation, DrawerActions } from "react-navigation";
+import { View, Text, StyleSheet, ScrollView, RefreshControl } from "react-native";
+import { PCards } from "../../components/personelCard";
+import AppBarComp from '../../components/appBarComp';
 class Hizmetler extends React.Component {
-	constructor(props) {
-		super(props);
-	}
-	_goBack = () => console.log('Went back');
+  constructor(props) {
+    super(props);
 
-	_onSearch = () => console.log('Searching');
+    this.state = {
+      isLoading: false,
+	  content: null,
+      refreshing: false
+    };
+  }
+  _onRefresh = () => {
+    this.setState({ refreshing: true });
+    this.makeRemoteRequest().then(() => {
+      this.setState({ refreshing: false });
+    });
+  };
+  makeRemoteRequest = () => {
+    return fetch(
+      "https://raw.githubusercontent.com/partitect/cobi/master/hizmetler.json"
+    )
+      .then(response => response.json())
+      .then(responseJson => {
+        this.setState({
+          isLoading: true,
+          content: responseJson.hizmetler
+        });
+      })
+      .catch(error => {});
+  };
+  componentDidMount() {
+    this.makeRemoteRequest();
+  }
 
-	_onMore = () => console.log('Shown more');
-	render() {
-		return (
-			<View>
-				<Appbar.Header>
-					<Appbar.Action
-						icon="menu"
-						onPress={() => this.props.navigation.dispatch(DrawerActions.toggleDrawer())}
-					/>
-					<Appbar.Content title="Amasya Belediyesi" subtitle="Anasayfa" />
-					<Appbar.Action icon="search" onPress={this._onSearch} />
-					<Appbar.Action icon="more-vert" onPress={this._onMore} />
-				</Appbar.Header>
+  _goBack = () => console.log("Went back");
 
-				<ScrollView style={styles.mainContent}>
-					
-				</ScrollView>
-			</View>
-		);
-	}
+  _onSearch = () => console.log("Searching");
+
+  _onMore = () => console.log("Shown more");
+  render() {
+    //console.log(this.state.content);
+    return (
+      <View style={{ flex: 1 }}>
+      <AppBarComp subTitle="Hizmetler"/>
+		<ScrollView
+          refreshControl={
+            <RefreshControl
+              refreshing={this.state.refreshing}
+              onRefresh={this._onRefresh}
+            />
+          }
+        >
+        <Headline style={styles.header}>
+        Amasya Belediyesi Hizmetler
+        </Headline>
+	
+		<Divider style={{marginBottom:10}}></Divider>
+        {this.state.isLoading ? (
+            <PCards
+              data={this.state.content}
+            />
+         
+        ) : (
+          <ActivityIndicator animating={true} color="red" />
+        )}
+		</ScrollView>
+      </View>
+    );
+  }
 }
 const styles = StyleSheet.create({
-	mainContent: {
-		padding: 10
-		//arginBottom:120
-	}
+  mainContent: {
+    padding: 10
+  },
+  content: {
+    flexDirection: "row",
+	flexWrap: "wrap",
+  },
+  header:{
+	  fontSize:18,
+	  textAlign:'center'
+  }
 });
 
 export default withNavigation(Hizmetler);

@@ -1,156 +1,124 @@
 {
-  "data": [
-    {
-      "id": 1,
-      "name": "Departmanlar",
-      "children": [
-        {
-          "id": 2,
-          "name": "Belediye Başkanı Mehmet Sarı",
-          "children": [
-            {
-              "id": 3,
-              "name": "Belediye Meclisi"
-            },
-            {
-              "id": 4,
-              "name": "Belediye Encümeni"
-            },
-            {
-              "id": 5,
-              "name": "Yazı İşleri Müdürlüğü"
-            },
-            {
-              "id": 6,
-              "name": "Mali Hizmetler Müdürülüğü"
-            },
-            {
-              "id": 7,
-              "name": "Strateji Geliştirme Müdürlüğü"
-            },
-            {
-              "id": 8,
-              "name": "Basın Yayın ve Halkla İlişkiler Müdürlüğü"
-            },
-            {
-              "id": 9,
-              "name": "Fen İşleri Müdürülüğü",
-              "children": [
-                {
-                  "id": 10,
-                  "name": "Tamirhane Şefliği"
-                },
-                {
-                  "id": 11,
-                  "name": "Park ve Bahçe Şefliği"
-                },
-                {
-                  "id": 12,
-                  "name": "Su Kanalizasyon Şefliği"
-                }
-              ]
-            },
-            {
-              "id": 13,
-              "name": "Teftiş Kurulu Müdürlüğü",
-              "children": [
-                {
-                  "id": 14,
-                  "name": "İç Denetçiler Şefliği"
-                },
-                {
-                  "id": 15,
-                  "name": "Hukuk İşleri Müdürlüğü"
-                }
-              ]
-            },
-            {
-              "id": 16,
-              "name": "Belediye Başkan Yardımcıları",
-              "children": [
-                {
-                  "id": 17,
-                  "name": "Belediye Başkan Yardımcısı Hasan ŞAHİN",
-                  "children": [
-                    {
-                      "id": 18,
-                      "name": "İnsan Kaynakları ve Eğitim Müdürülüğü"
-                    },
-                    {
-                      "id": 19,
-                      "name": "Strateji Geliştirme Müdürlüğü"
-                    },
-                    {
-                      "id": 20,
-                      "name": "Kültür ve Sosyal İşler Müdürülüğü"
-                    }
-                  ]
-                },
-                {
-                  "id": 21,
-                  "name": "Başkan Yardımcısı Ahmet ÇOBAN",
-                  "children": [
-                    {
-                      "id": 22,
-                      "name": "Zabıta Müdürlüğü"
-                    },
-                    {
-                      "id": 23,
-                      "name": "İtfaiye Müdürlüğü"
-                    },
-                    {
-                      "id": 24,
-                      "name": "Veteriner İşleri Müdürlüğü"
-                    },
-                    {
-                      "id": 25,
-                      "name": "Hal Müdürlüğü"
-                    },
-                    {
-                      "id": 26,
-                      "name": "Bilgi İşlem Müdürlüğü"
-                    },
-                    {
-                      "id": 27,
-                      "name": "Muhtarlık Müdürlüğü"
-                    },
-                    {
-                      "id": 28,
-                      "name": "Destek Hizmetleri Müdürlüğü"
-                    },
-                    {
-                      "id": 29,
-                      "name": "Sosyal Yardım Hizmetleri Müdürlüğü"
-                    },
-                    {
-                      "id": 30,
-                      "name": "Evlendirme Mumurluğu"
-                    }
-                  ]
-                },
-                {
-                  "id": 31,
-                  "name": "Belediye Başkan Yardımcısı İsmail KAZAN",
-                  "children": [
-                    {
-                      "id": 32,
-                      "name": "İmar ve Şehircilik Müdürlüğü"
-                    },
-                    {
-                      "id": 33,
-                      "name": "Ruhsat ve Demetim Müdürlüğü"
-                    },
-                    {
-                      "id": 34,
-                      "name": "Temizlik İşleri Müdürlüğü"
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        }
-      ]
-    }
-  ]
+	"eczaneler": [
+		{
+			"id": "1",
+			"origin_date": "2019-07-25",
+			"name": "Peker Eczanesi"
+		},
+		{
+			"id": "2",
+			"origin_date": "2019-07-25",
+			"name": "Demet Eczanesi"
+		},
+		{
+			"id": "3",
+			"origin_date": "2019-07-26",
+			"name": "Eczane Saygın"
+		},
+		{
+			"id": "4",
+			"origin_date": "2019-07-26",
+			"name": "Merkez Eczanesi"
+		},
+		{
+			"id": "5",
+			"origin_date": "2019-07-27",
+			"name": "Eczane Hilal Altekin"
+		},
+		{
+			"id": "6",
+			"origin_date": "2019-07-27",
+			"name": "Eczane Kübra"
+		},
+		{
+			"id": "7",
+			"origin_date": "2019-07-28",
+			"name": "Eczane Başak"
+		},
+		{
+			"id": "8",
+			"origin_date": "2019-07-28",
+			"name": "Gönül Eczanesi"
+		},
+		{
+			"id": "9",
+			"origin_date": "2019-07-29",
+			"name": "Huzur Eczanesi"
+		},
+		{
+			"id": "10",
+			"origin_date": "2019-07-29",
+			"name": "Peker Eczanesi"
+		},
+		{
+			"id": "11",
+			"origin_date": "2019-07-30",
+			"name": "Amasya Eczanesi"
+		},
+		{
+			"id": "12",
+			"origin_date": "2019-07-30",
+			"name": "Beste Eczanesi"
+		},
+		{
+			"id": "13",
+			"origin_date": "2019-07-31",
+			"name": "Hayat Eczanesi"
+		},
+		{
+			"id": "14",
+			"origin_date": "2019-07-31",
+			"name": "Müjde Eczanesi"
+		},
+		{
+			"id": "15",
+			"origin_date": "2019-08-01",
+			"name": "Eczane Başak"
+		},
+		{
+			"id": "16",
+			"origin_date": "2019-08-01",
+			"name": "Eczane Kübra"
+		},
+		{
+			"id": "17",
+			"origin_date": "2019-08-02",
+			"name": "Sağlık Eczanesi"
+		},
+		{
+			"id": "18",
+			"origin_date": "2019-08-02",
+			"name": "Seven Eczanesi"
+		},
+		{
+			"id": "19",
+			"origin_date": "2019-08-03",
+			"name": "Albayrak Eczanesi"
+		},
+		{
+			"id": "20",
+			"origin_date": "2019-08-03",
+			"name": "Derman Eczanesi"
+		},
+		{
+			"id": "21",
+			"origin_date": "2019-08-04",
+			"name": "İlkay Eczanesi"
+		},
+		{
+			"id": "22",
+			"origin_date": "2019-08-04",
+			"name": "Müjde Eczanesi"
+		},
+		{
+			"id": "23",
+			"origin_date": "2019-08-05",
+			"name": "Gökman Eczanesi"
+		},
+		{
+			"id": "24",
+			"origin_date": "2019-08-05",
+			"name": "Ümit Eczanesi"
+		}
+	]
 }

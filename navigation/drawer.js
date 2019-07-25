@@ -30,30 +30,42 @@ import PlanButceKomisyonu from "../screens/Yonetim/PlanButceKomisyonu";
 import Haberler from "../screens/Icerik/Haberler";
 import Duyurular from "../screens/Icerik/Duyurular";
 import Etkinlikler from "../screens/Icerik/Etkinlikler";
-import ihaleler from "../screens/Icerik/ihaleler";
+import Ihaleler from "../screens/Icerik/ihaleler";
 
 class TabComp extends React.PureComponent {
   state = {
     index: 0,
     routes: [
-      { key: "home", title: "Anasayfa", icon: "spa", color: "#ec4d37" },
+      { key: "home", title: "Anasayfa", icon: "spa", color: "#ED1C24" },
       {
         key: "haber",
         title: "Haberler",
         icon: "developer-board",
-        color: "#00796b"
+        color: "#ED1C24"
       },
       {
         key: "duyuru",
         title: "Duyurular",
         icon: "announcement",
-        color: "#2962ff"
+        color: "#ED1C24"
       },
       {
         key: "etkinlik",
         title: "Etkinlikler",
         icon: "event-note",
-        color: "#6200ee"
+        color: "#ED1C24"
+	  },
+	  {
+        key: "ihale",
+        title: "İhaleler",
+        icon: "business-center",
+        color: "#ED1C24"
+	  },
+	  {
+        key: "hizmet",
+        title: "Hizmetler",
+        icon: "local-florist",
+        color: "#ED1C24"
       }
     ]
   };
@@ -64,7 +76,9 @@ class TabComp extends React.PureComponent {
     home: HomeScreen,
     haber: Haberler,
     duyuru: Duyurular,
-    etkinlik: Etkinlikler
+	etkinlik: Etkinlikler,
+	ihale:Ihaleler,
+	hizmet:Hizmetler
   });
 
   render() {
