@@ -7,12 +7,22 @@ import AppBarComp from '../../components/appBarComp';
 class Haberler extends React.Component {
   constructor(props) {
     super(props);
-
+	let { params } = this.props.navigation.state;
+    this.title = params ? params.title : 1;
+    this.id = params ? params.id : 1;
+    this.onPress = this.onPress.bind(this);
     this.state = {
       isLoading: false,
 	  content: null,
       refreshing: false
     };
+  }
+  onPress(title, id) {
+    this.props.navigation.navigate("Details", {
+      title: title,
+	  id: id,
+	  tur:"haberler"
+    });
   }
   _onRefresh = () => {
     this.setState({ refreshing: true });
@@ -22,13 +32,13 @@ class Haberler extends React.Component {
   };
   makeRemoteRequest = () => {
     return fetch(
-      "https://raw.githubusercontent.com/partitect/cobi/master/haberler.json"
+      "https://raw.githubusercontent.com/partitect/cobi/master/icerikler.json"
     )
       .then(response => response.json())
       .then(responseJson => {
         this.setState({
           isLoading: true,
-          content: responseJson.haberler
+          content: responseJson.icerikler[0].haberler
         });
       })
       .catch(error => {});
@@ -58,7 +68,9 @@ class Haberler extends React.Component {
        <Headline style={[ styles.vHeader ]}>Tüm Haberler</Headline>
         {this.state.isLoading ? (
             <HCards
-              data={this.state.content}
+			  data={this.state.content}
+			  OnPress={this.onPress}
+			  navScreen="Details"
             />
          
         ) : (

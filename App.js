@@ -11,7 +11,7 @@ import {
   SafeAreaView
 } from "react-native";
 import { Ionicons } from "@expo/vector-icons";
-
+import GeneralStatusBarColor from "./components/publicComponents/statusBar";
 
 import DrawerComp from "./navigation/drawer";
 export default function App(props) {
@@ -28,6 +28,11 @@ export default function App(props) {
   } else {
     return (
       <Fragment>
+		  <View style={{ flex: 1 }}>
+		   <GeneralStatusBarColor
+            backgroundColor="#ED1C24"
+            barStyle="light-content"
+          />
         <SafeAreaView style={{ flex: 0, backgroundColor: "#ED1C24" }} />
         <SafeAreaView style={{ flex: 1, backgroundColor: "#ED1C24" }}>
           {Platform.OS === "ios" && <StatusBar barStyle="default" />}
@@ -35,6 +40,7 @@ export default function App(props) {
             <DrawerComp />
           </View>
         </SafeAreaView>
+		</View>
       </Fragment>
     );
   }
@@ -43,8 +49,8 @@ export default function App(props) {
 async function loadResourcesAsync() {
   await Promise.all([
     Asset.loadAsync([
-      require("./assets/images/robot-dev.png"),
-      require("./assets/images/robot-prod.png")
+      require("./assets/images/icon.png"),
+      require("./assets/images/splash.png")
     ]),
     Font.loadAsync({
       // This is the font that we are using for our tab bar

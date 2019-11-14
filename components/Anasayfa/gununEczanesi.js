@@ -35,9 +35,10 @@ class GununEczanesi extends React.PureComponent {
   }
 
   onPress(title, id) {
-    this.props.navigation.navigate("detay", {
+    this.props.navigation.navigate("FirmaDetails", {
       title: title,
-      id: id
+	  id: id,
+	  tur:"eczaneler"
     });
   }
   _onRefresh = () => {
@@ -103,7 +104,7 @@ class GununEczanesi extends React.PureComponent {
               const App = () => {
                 return (
                   <TouchableRipple
-                    onPress={() => this.onPress(data.title, data.id)}
+                    onPress={() => this.onPress(data.title, data.id, this.props.navScreen,this.props.Tur)}
                     style={{
                       height: Dimensions.get("window").width / 2,
                       width: wdt,
@@ -139,7 +140,7 @@ class GununEczanesi extends React.PureComponent {
             })}
           </View>
         ) : (
-          <ActivityIndicator animating={true} color={Colors.red800} />
+          <View style={{flex:1}} />
         )}
       </ScrollView>
     );
@@ -174,6 +175,15 @@ const styles = StyleSheet.create({
   subContainer: {
     paddingVertical: 10,
     paddingHorizontal: 5
+  },
+  loading: {
+    position: 'absolute',
+    left: 0,
+    right: 0,
+    top: 0,
+    bottom: 0,
+    alignItems: 'center',
+    justifyContent: 'center'
   }
 });
 export default withNavigation(withTheme(GununEczanesi));

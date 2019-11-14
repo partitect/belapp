@@ -4,15 +4,26 @@ import { withNavigation, DrawerActions } from "react-navigation";
 import { View, Text, StyleSheet, ScrollView, RefreshControl } from "react-native";
 import { PCards } from "../../components/personelCard";
 import AppBarComp from '../../components/appBarComp';
-class Hizmetler extends React.Component {
+class Hizmetler extends React.PureComponent<Props> {
   constructor(props) {
     super(props);
+	let { params } = this.props.navigation.state;
+    this.title = params ? params.title : 1;
+    this.id = params ? params.id : 1;
+    this.onPress = this.onPress.bind(this);
 
     this.state = {
       isLoading: false,
 	  content: null,
       refreshing: false
     };
+  }
+  onPress(title, id) {
+	this.props.navigation.navigate("HizmetDetails", {
+	  title: title,
+	  id: id,
+	  tur:"hizmetler"
+	});
   }
   _onRefresh = () => {
     this.setState({ refreshing: true });
@@ -62,7 +73,9 @@ class Hizmetler extends React.Component {
 		<Divider style={{marginBottom:10}}></Divider>
         {this.state.isLoading ? (
             <PCards
-              data={this.state.content}
+			data={this.state.content}
+			OnPress={this.onPress}
+			navScreen="HizmetDetails"
             />
          
         ) : (

@@ -9,7 +9,7 @@
       "android",
       "web"
     ],
-    "version": "1.0.0",
+    "version": "1.0.1",
     "orientation": "portrait",
     "icon": "./assets/images/icon.png",
     "splash": {
@@ -19,12 +19,16 @@
     },
     "updates": {
       "fallbackToCacheTimeout": 0
-    },
+	},
+	"ios": {
+		"bundleIdentifier": "com.bellapp.amasya",
+		"supportsTablet": true
+	  },
+	  "android": {
+		"package": "com.bellapp.amasya"
+	  },
     "assetBundlePatterns": [
       "**/*"
-    ],
-    "ios": {
-      "supportsTablet": true
-    }
+    ]
   }
 }

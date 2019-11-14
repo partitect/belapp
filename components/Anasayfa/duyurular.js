@@ -98,9 +98,10 @@ class Duyurular extends React.PureComponent {
   }
 
   onPress(title, id) {
-    this.props.navigation.navigate("kesifAlt", {
+    this.props.navigation.navigate("Details", {
       title: title,
-      id: id
+	  id: id,
+	  tur:"duyurular"
     });
   }
   makeRemoteRequest = () => {
@@ -189,7 +190,7 @@ class Duyurular extends React.PureComponent {
             })}
           </View>
         ) : (
-          <ActivityIndicator animating={true} color={Colors.red800} />
+			<View style={{flex:1}} />
         )}
       </ScrollView>
     );

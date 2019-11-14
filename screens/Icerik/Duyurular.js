@@ -7,12 +7,21 @@ import AppBarComp from '../../components/appBarComp';
 class Duyurular extends React.Component {
   constructor(props) {
     super(props);
-
+	let { params } = this.props.navigation.state;
+    this.title = params ? params.title : 1;
+    this.id = params ? params.id : 1;
+    this.onPress = this.onPress.bind(this);
     this.state = {
       isLoading: false,
 	  content: null,
       refreshing: false
     };
+  }
+  onPress(title, id) {
+    this.props.navigation.navigate("Details", {
+      title: title,
+      id: id
+    });
   }
   _onRefresh = () => {
     this.setState({ refreshing: true });
@@ -22,13 +31,13 @@ class Duyurular extends React.Component {
   };
   makeRemoteRequest = () => {
     return fetch(
-      "https://raw.githubusercontent.com/partitect/cobi/master/duyurular.json"
+      "https://raw.githubusercontent.com/partitect/cobi/master/icerikler.json"
     )
       .then(response => response.json())
       .then(responseJson => {
         this.setState({
           isLoading: true,
-          content: responseJson.duyurular
+          content: responseJson.icerikler[0].duyurular
         });
       })
       .catch(error => {});
@@ -46,7 +55,7 @@ class Duyurular extends React.Component {
     //console.log(this.state.content);
     return (
       <View style={{ flex: 1 }}>
-        <AppBarComp subTitle="Duyurular"/>
+       <AppBarComp subTitle="Haberler"/>
 		<ScrollView
           refreshControl={
             <RefreshControl
@@ -58,7 +67,9 @@ class Duyurular extends React.Component {
        <Headline style={[ styles.vHeader ]}>Tüm Duyurular</Headline>
         {this.state.isLoading ? (
             <HCards
-              data={this.state.content}
+			  data={this.state.content}
+			  OnPress={this.onPress}
+			  navScreen="Etkinlikler"
             />
          
         ) : (

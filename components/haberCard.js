@@ -5,12 +5,20 @@ import { LinearGradient } from 'expo-linear-gradient'
 
 
 
+
 export class HCards extends React.PureComponent<Props> {
   constructor(props) {
     super(props);
-    
+	this.onPress = this.props.OnPress.bind(this);
   }
-
+  onPress(title, id, screen,tur) {
+    this.props.navigation.navigate(screen, {
+      title: title,
+	  id: id,
+	  tur: tur
+	});
+	
+  }
   render() {
     
     return (
@@ -38,7 +46,7 @@ export class HCards extends React.PureComponent<Props> {
               return (
                 <TouchableRipple
                   onPress={() =>
-                    this.onPress(data.title, data.id, this.props.navScreen)
+                    this.onPress(data.title, data.id, this.props.navScreen,this.props.Tur)
                   }
                   style={{
                     height: Dimensions.get("window").width / 2,
@@ -55,9 +63,12 @@ export class HCards extends React.PureComponent<Props> {
                     <LinearGradient
                       colors={[
                         "rgba(246,243,255,.1)",
-                        "rgba(246,243,255,.1)",
-                        "rgba(246,243,255,.1)",
-                        "rgba(0,0,0,.5)"
+						"rgba(246,243,255,.1)",
+						"rgba(246,243,255,.1)",
+                        "rgba(246,243,255,.1)",						
+                        "rgba(0,0,0,.5)",
+						"rgba(0,0,0,.8)",
+						"rgba(0,0,0,1)"
                       ]}
                       style={styles.overlay}
                     >
@@ -91,7 +102,6 @@ const styles = StyleSheet.create({
     right: 0,
     bottom: 0,
     left: 0,
-    backgroundColor: "rgba(0,0,238,.2)",
     borderRadius: 5
   },
   item: {
@@ -102,8 +112,9 @@ const styles = StyleSheet.create({
   imgText: {
     color: "#fff",
     paddingHorizontal: 5,
-    fontSize: 20,
-    position: "absolute",
+    fontSize: 18,
+	position: "absolute",
+	fontFamily:'quicksand',
     bottom: 0
   },
   gorevText: {

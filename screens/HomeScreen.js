@@ -26,7 +26,6 @@ class HomeScreen extends React.Component {
 				<AppBarComp subTitle="Anasayfa" />
 				<ScrollView style={styles.mainContent}>
 					<View style={{ flex: 1 }}>
-						<Headline style={[ styles.vHeader ]}>Amasya Bugün</Headline>
 						<HavaDurumu />
 						<Headline style={[ styles.vHeader ]}>Belediyemizden Haberler</Headline>
 						<Haberler />
@@ -48,8 +47,7 @@ const styles = StyleSheet.create({
 		fontWeight: 'normal',
 		fontFamily: 'opensans-bold',
 		padding: 7,
-		backgroundColor: '#00A651',
-		color: '#fff'
+		color: '#000'
 	}
 });
 

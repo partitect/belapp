@@ -1,124 +1,148 @@
 {
-	"eczaneler": [
+	"icerikler": [
 		{
-			"id": "1",
-			"origin_date": "2019-07-25",
-			"name": "Peker Eczanesi"
-		},
-		{
-			"id": "2",
-			"origin_date": "2019-07-25",
-			"name": "Demet Eczanesi"
-		},
-		{
-			"id": "3",
-			"origin_date": "2019-07-26",
-			"name": "Eczane Saygın"
-		},
-		{
-			"id": "4",
-			"origin_date": "2019-07-26",
-			"name": "Merkez Eczanesi"
-		},
-		{
-			"id": "5",
-			"origin_date": "2019-07-27",
-			"name": "Eczane Hilal Altekin"
-		},
-		{
-			"id": "6",
-			"origin_date": "2019-07-27",
-			"name": "Eczane Kübra"
-		},
-		{
-			"id": "7",
-			"origin_date": "2019-07-28",
-			"name": "Eczane Başak"
-		},
-		{
-			"id": "8",
-			"origin_date": "2019-07-28",
-			"name": "Gönül Eczanesi"
-		},
-		{
-			"id": "9",
-			"origin_date": "2019-07-29",
-			"name": "Huzur Eczanesi"
-		},
-		{
-			"id": "10",
-			"origin_date": "2019-07-29",
-			"name": "Peker Eczanesi"
-		},
-		{
-			"id": "11",
-			"origin_date": "2019-07-30",
-			"name": "Amasya Eczanesi"
-		},
-		{
-			"id": "12",
-			"origin_date": "2019-07-30",
-			"name": "Beste Eczanesi"
-		},
-		{
-			"id": "13",
-			"origin_date": "2019-07-31",
-			"name": "Hayat Eczanesi"
-		},
-		{
-			"id": "14",
-			"origin_date": "2019-07-31",
-			"name": "Müjde Eczanesi"
-		},
-		{
-			"id": "15",
-			"origin_date": "2019-08-01",
-			"name": "Eczane Başak"
-		},
-		{
-			"id": "16",
-			"origin_date": "2019-08-01",
-			"name": "Eczane Kübra"
-		},
-		{
-			"id": "17",
-			"origin_date": "2019-08-02",
-			"name": "Sağlık Eczanesi"
-		},
-		{
-			"id": "18",
-			"origin_date": "2019-08-02",
-			"name": "Seven Eczanesi"
-		},
-		{
-			"id": "19",
-			"origin_date": "2019-08-03",
-			"name": "Albayrak Eczanesi"
-		},
-		{
-			"id": "20",
-			"origin_date": "2019-08-03",
-			"name": "Derman Eczanesi"
-		},
-		{
-			"id": "21",
-			"origin_date": "2019-08-04",
-			"name": "İlkay Eczanesi"
-		},
-		{
-			"id": "22",
-			"origin_date": "2019-08-04",
-			"name": "Müjde Eczanesi"
-		},
-		{
-			"id": "23",
-			"origin_date": "2019-08-05",
-			"name": "Gökman Eczanesi"
-		},
-		{
-			"id": "24",
-			"origin_date": "2019-08-05",
-			"name": "Ümit Eczanesi"
+			"haberler": [
+				{
+					"id": 0,
+					"title": "MHP Genel Başkanı Dr. Devlet BAHÇELİ AMASYA’da",
+					"subtitle": "Milliyetçi Hareket Partisi Genel Başkanı Bilge Lider Sayın Dr. Devlet Bahçeli, 31 Mart yerel seçimleri sonrasında partisinin başarılı olduğu belediye başkanlıklarına 3T temalı teşekkür, takdir ve tebrik ziyaretleri kapsamında 27 Temmuz 2019 Cumartesi günü Amasya’da olacak. Milliyetçi Hareket Partisi (MHP), 31 Mart’ta 1 büyükşehir, 10 il, 133 ilçe ve 89 belde olmak üzere toplam 233 belediye kazanmış ve belediye sayısını yaklaşık 2 katına çıkarmıştı.MHP lideri ilimizi ziyaretlerinde hem Belediye Başkanımız Sayın Mehmet SARI’yı tebrik etmek hem seçimlerde gösterdikleri başarıdan dolayı teşkilatlarımıza teşekkür etmek hem de Amasya halkına takdir ve şükranlarını sunmak üzere Saat 15.00’da Belediye Hizmet Binasının önünde hemşehrilerimize hitap edeceklerdir.",
+					"date": "26.07.2019",
+					"image": "http://amasya.bel.tr/Files/1068392.jpg",
+					"images": [ "http://amasya.bel.tr/Files/1068392.jpg" ]
+				},
+				{
+					"id": 1,
+					"title": "Başkan Sarı’yı acılı gününde dostları yalnız bırakmadı",
+					"subtitle": "Belediye Başkanımız Mehmet Sarı’nın babasının ablası (emesi) Hatice Malkoç Hakkın rahmetine kavuştu. Merhumenin cenazesi Tokat’ın Erbaa ilçesinde oturduğu evinin önünden helallik alınarak cenaze nakil aracıyla Taşova-Uluköy e getirildi. Merhumenin cenazesi burada ikindi namazı sonrası kılınan cenaze namazının ardından Uluköy’de bulunan aile kabristanlığına defnedildi. Cenaze namazına Amasya Belediye Başkan Yardımcılarımız Sayın Ahmet Çoban ve Sayın Hasan Şahin, Ülkü Ocakları Amasya İl Başkanı Sayın Recep Dip, Fen İşleri Müdürümüz Sayın Ali Özel, Taşova İlçe Belediye Başkanı Sayın Bayram Öztürk, Erbaa Eski Belediye Başkanı Sayın Ahmet Yenihan, Erbaa İlçe Belediye Başkanı Sayın Ertuğrul Karagöl, Taşova MHP İlçe Başkanı Sayın Aslan Berber, Amasya Esnaf ve Sanatkarlar Odaları Birlik Başkanı Sayın İsa Köse, Hizmet-iş sendikası Amasya Şube Başkanı Sayın İsmail Pazar, MHP Amasya Belediyesi Meclis Üyeleri’nin yanı sıra Uluköy sakinleri, ailesi ve akrabaları katıldı.Cenazenin defnedilmesinin ardından Amasya Belediye Başkanımız Sayın Mehmet Sarı taziyeleri kabul etti.",
+					"date": "21.05.2019",
+					"image": "http://amasya.bel.tr/Files/haber_galeri/20052019/20059.jpg",
+					"images": [
+						"http://amasya.bel.tr/Files/haber_galeri/20052019/20052.jpg",
+						"http://amasya.bel.tr/Files/haber_galeri/20052019/20053.jpg",
+						"http://amasya.bel.tr/Files/haber_galeri/20052019/20054.jpg",
+						"http://amasya.bel.tr/Files/haber_galeri/20052019/20055.jpg",
+						"http://amasya.bel.tr/Files/haber_galeri/20052019/20056.jpg",
+						"http://amasya.bel.tr/Files/haber_galeri/20052019/20057.jpg",
+						"http://amasya.bel.tr/Files/haber_galeri/20052019/20058.jpg",
+						"http://amasya.bel.tr/Files/haber_galeri/20052019/20059.jpg",
+						"http://amasya.bel.tr/Files/haber_galeri/20052019/200591.jpg",
+						"http://amasya.bel.tr/Files/haber_galeri/20052019/200592.jpg",
+						"http://amasya.bel.tr/Files/haber_galeri/20052019/2005.jpg",
+						"http://amasya.bel.tr/Files/haber_galeri/20052019/20051.jpg"
+					]
+				},
+				{
+					"id": 2,
+					"title": "100.Yıl Kutlamaları Kapsamında Samsundaydık",
+					"subtitle": "Başkan Sarı, Milli Mücadele’nin 100'üncü yıl kutlama etkinlikleri çerçevesinde Sayın Cumhurbaşkanımız Recep Tayyip Erdoğan ve Mhp Genel Başkanımız Sayın Dr. Devlet Bahçeli Beyefendinin katılımlarıyla Yaşar Doğu Spor Salonu'nda gerçekleştirilen kutlama programına katıldı. Programın devamında düzenlenen iftar programına iştirak etti.",
+					"date": "20.05.2019",
+					"image": "http://amasya.bel.tr/Files/haber_galeri/yasardogu19mays/yasardogu19mays%20(3).jpg",
+					"images": [
+						"http://amasya.bel.tr/Files/haber_galeri/yasardogu19mays/yasardogu19mays%20(3).jpg",
+						"http://amasya.bel.tr/Files/haber_galeri/yasardogu19mays/yasardogu19mays%20(2).jpg",
+						"http://amasya.bel.tr/Files/haber_galeri/yasardogu19mays/yasardogu19mays%20(4).jpg",
+						"http://amasya.bel.tr/Files/haber_galeri/yasardogu19mays/yasardogu19mays%20(5).jpg",
+						"http://amasya.bel.tr/Files/haber_galeri/yasardogu19mays/yasardogu19mays%20(6).jpg",
+						"http://amasya.bel.tr/Files/haber_galeri/yasardogu19mays/yasardogu19mays%20(7).jpg",
+						"http://amasya.bel.tr/Files/haber_galeri/yasardogu19mays/yasardogu19mays%20(8).jpg"
+					]
+				},
+				{
+					"id": 3,
+					"title": "Başkan Sarı, Gençlik Şöleni'ne Katıldı",
+					"subtitle": "Belediye Başkanımız Sayın Mehmet Sarı'nın verdiği 2500 kişilik iftar programı sonrası, Ülkü Ocakları Genel Merkezi tarafından 17-19 Mayıs 1. Uluslararası Gençlik Kongresi'nin ardından Samsun'da düzenlenen Gençlik Şöleni'ne Ülkü Ocakları Genel Başkanı Sayın Dr. Sinan Ateş, MHP Genel Başkan Yardımcısı Sayın Mustafa Kalaycı, MHP Erzurum Milletvekili Sayın Kamil Aydın, tüm İl Ocak Başkanları, Belediye Başkanımız Sayın Mehmet Sarı ve davetliler katıldı.",
+					"date": "20.05.2019",
+					"image": "http://amasya.bel.tr/Files/haber_galeri/19mayiftar/19mayiftar%20(10).jpg",
+					"images": [
+						"http://amasya.bel.tr/Files/haber_galeri/19mayiftar/19mayiftar%20(10).jpg",
+						"http://amasya.bel.tr/Files/haber_galeri/19mayiftar/19mayiftar%20(3).jpg",
+						"http://amasya.bel.tr/Files/haber_galeri/19mayiftar/19mayiftar%20(4).jpg",
+						"http://amasya.bel.tr/Files/haber_galeri/19mayiftar/19mayiftar%20(5).jpg",
+						"http://amasya.bel.tr/Files/haber_galeri/19mayiftar/19mayiftar%20(8).jpg",
+						"http://amasya.bel.tr/Files/haber_galeri/19mayiftar/19mayiftar%20(1).jpg",
+						"http://amasya.bel.tr/Files/haber_galeri/19mayiftar/19mayiftar%20(13).jpg"
+					]
+				},
+				{
+					"id": 4,
+					"title": "Milli Mücadele'nin 100. Yılında 19 Mayıs Coşkusu",
+					"subtitle": "19 Mayıs Atatürk’ü Anma Gençlik ve Spor Bayramı Milli Mücadelenin 100. yılında Amasya’da coşkuyla kutlandı. Cumhuriyetimizin kurucusu Gazi Mustafa Kemal Atatürk’ün 19 Mayıs 1919’da Milli Mücadele’yi başlatmasının 100. yılı dolayısıyla bu yıl daha coşkulu geçen Amasya Spor Salonundaki kutlamalara, Vali Sayın Dr. Osman Varol ve eşi Funda Varol Hanımefendi, Garnizon Komutanı Tuğgeneral Sayın Nihat Ergün, Amasya Belediye Başkanımız Sayın Mehmet Sarı, kamu kurum ve kuruluş müdürleri, öğrenciler ve çok sayıda vatandaşımız katıldı. Saygı duruşu ve İstiklal Marşımızın okunmasıyla başlayan törende Protokol üyeleri öğrencilerin ve halkımızın bayramını kutladı. Daha sonra gençlerimiz adına Gençlik Merkezi üyeleri konuşma yapıp şiir okudu. Gençlik ve Spor İl Müdürü Kadir Kılıç da günün anlam ve önemine ilişkin bir konuşma yaptı. Avrupa şampiyonu ve ikincisi olan taekwondocular ile judo ve güreşçilerimizin sportif gösterileriyle devam edip folklor ekiplerinin sahne aldığı programda daha sonra ulusal ve uluslararası müsabakalarda dereceye giren sporculara protokol üyeleri tarafından ödülleri verildi.",
+					"date": "20.05.2019",
+					"image": "http://amasya.bel.tr/Files/haber_galeri/100.ylda19mays/100%20(3).jpg",
+					"images": [
+						"http://amasya.bel.tr/Files/haber_galeri/100.ylda19mays/100%20(3).jpg",
+						"http://amasya.bel.tr/Files/haber_galeri/100.ylda19mays/100%20(10).jpg",
+						"http://amasya.bel.tr/Files/haber_galeri/100.ylda19mays/100%20(11).jpg",
+						"http://amasya.bel.tr/Files/haber_galeri/100.ylda19mays/100%20(2).jpg",
+						"http://amasya.bel.tr/Files/haber_galeri/100.ylda19mays/100%20(4).jpg",
+						"http://amasya.bel.tr/Files/haber_galeri/100.ylda19mays/100%20(5).jpg",
+						"http://amasya.bel.tr/Files/haber_galeri/100.ylda19mays/100%20(6).jpg",
+						"http://amasya.bel.tr/Files/haber_galeri/100.ylda19mays/100%20(7).jpg",
+						"http://amasya.bel.tr/Files/haber_galeri/100.ylda19mays/100%20(8).jpg",
+						"http://amasya.bel.tr/Files/haber_galeri/100.ylda19mays/100%20(9).jpg",
+						"http://amasya.bel.tr/Files/haber_galeri/100.ylda19mays/100.ylda19mays.jpg"
+					]
+				},
+				{
+					"id": 5,
+					"title": "Başkan Sarı'ya 100 Bini Aşkın Ziyaret",
+					"subtitle": "31 Mart Mahalli İdareler Yerel seçimi sonrasında Belediye Başkanı seçilen Sayın Mehmet Sarı’ya 48 günlük sürede 100 bin 220 kişi hayırlı olsun ziyaretinde bulundu. 31 Mart Mahalli İdareler Yerel seçiminde Milliyetçi Hareket Partisi’nden Belediye Başkanı seçilen Sayın Mehmet Sarı’yı görevi devraldığı 48 günlük zamanda 100 bin 220 kişi ziyaret ederek yeni görevinde başarılar dilediler. Başkan Sarı, hayırlı olsun ziyaretleri için gelen misafirleri ile tek tek ilgilenerek sorunları, dertlerini dinledi. Bir ay 18 günlük zaman diliminde mesai kavramı gözetmeksizin kapısını bütün Amasyalıya açan Belediye Başkanımız Sayın Mehmet Sarı, Amasyalı hemşerilerimizin dertlerini ve sorunlarını kendi dertleri ve sorunları olarak gördüklerini söyledi. Başkan Sarı, “Görevi devraldığımız günden bu yana geçen 48 günlük zamanda ziyaretimize gelerek, görevimizde başarılar dileyen 100 bin 220 kişiye teşekkür ediyorum. Amasya’mızın nüfusunun neredeyse tamamının bizlere teveccüh göstermesi bizleri ziyadesiyle mutlu etti. Bizlerde yapacağımız hizmetlerimizle Amasyalı hemşerilerimize layık olmaya çalışacağız” dedi.",
+					"date": "17.05.2019",
+					"image": "http://www.amasya.bel.tr/Files/haber_galeri/1705ziyaret/1705ziyaret(1).JPG",
+					"images": [
+						"http://amasya.bel.tr/Files/haber_galeri/1705ziyaret/1705ziyaret(1).JPG",
+						"http://amasya.bel.tr/Files/haber_galeri/1705ziyaret/1705ziyaret(3).JPG",
+						"http://amasya.bel.tr/Files/haber_galeri/1705ziyaret/1705ziyaret(4).JPG",
+						"http://amasya.bel.tr/Files/haber_galeri/1705ziyaret/1705ziyaret(6).JPG",
+						"http://amasya.bel.tr/Files/haber_galeri/1705ziyaret/1705ziyaret(7).JPG",
+						"http://amasya.bel.tr/Files/haber_galeri/1705ziyaret/1705ziyaret(8).JPG",
+						"http://amasya.bel.tr/Files/haber_galeri/1705ziyaret/1705ziyaret(9).JPG"
+					]
+				}
+			],
+			"duyurular": [
+				{
+					"id": 1,
+					"title": "İmar Planı Değişikliği Hakkında",
+					"subtitle": "3194 Sayılı İmar Kanununun 8/b maddesine istinaden imar planı değişiklikleri yapılmış olup; Belediye Meclisi' nin 05.07.2019 tarih ve 41 (Uİ38318, NİP-38317), sayılı kararı ile onanan 1/5000 ölçekli Nazım İmar Planı ve 1/1000 ölçekli Uygulama İmar Planı İlan Panosuna asılmıştır. İlgililer 1 aylık ilanı Belediye İlan Tahtasından Belediyemiz İmar İşleri Müdürlüğünden mesai saatleri içerisinde bilgi alabilirler ve itirazda bulunabilirler. 3194 sayılı İmar Kanununun 8/b maddesine istinaden duyurulur.",
+					"date": "22.07.2019",
+					"image": "",
+					"images": []
+				}
+			],
+			"etkinlikler": [
+				{
+					"id": 1,
+					"title": "Amasya Belediye Spor Yaz Okulu Açılışı",
+					"subtitle": "",
+					"image": "http://www.amasya.bel.tr/Files/mehmet-sari/etkinlik/amasya-belediye-spor.jpg",
+					"info": [
+						{
+							"tur": "Açılış",
+							"tarih": "18.07.2019",
+							"yer": "Amasya Belediye Spor Tesisleri",
+							"saat": "17:30",
+							"aciklama": "Yaz Okulu Açılışı"
+						}
+					]
+				}
+			],
+			"ihaleler": [
+				{
+					"id": 1,
+					"title": "1 Adet Kalem Alım İlanı",
+					"subtitle": "",
+					"image": "https://image.freepik.com/free-photo/composition-pencils_23-2147986590.jpg",
+					"info": [
+						{
+							"tarih": "18.07.2019",
+							"saat": "17:30",
+							"tur": "Açık İhale",
+							"belge": "https://github.com/partitect/cobi/blob/master/encumen.json"
+						}
+					]
+				}
+			]
 		}
 	]
 }
