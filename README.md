@@ -1,2 +1,2 @@
 # belapp
-Belediye Uygulaması
+React Native ile Belediye Uygulaması (Amasya Belediyesi)
